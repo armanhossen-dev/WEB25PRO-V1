@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock | HTML CSS & JS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock"> 
+                <!--00:00:00-->
+                <span id="hr">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>  
+    <script>
+        let hr = document.getElementById("hr")
+        let min = document.getElementById("min")
+        let sec = document.getElementById("sec")
+
+        setInterval(() => {
+            let currentTime = new Date();
+            //(currentTime.getHours()<10? "0":"")  this for ,if the number is less than 10 then it will show 1 zero before the number
+            hr.innerHTML = (currentTime.getHours()<10? "0":"") + currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes()<10? "0":"") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds()<10? "0":"") + currentTime.getSeconds();
+        }, 1000)     
+        //1000 mili seconds means 1 second, now this will ulpdate every 1 sec
+        
+        /*
+        console.log(currentTime);
+        open the tab where the live server is hosting the page, 
+        inspect
+        then goto console clear filter you will see the output of this line
+        Thu Apr 17 2025 02:47:05 GMT+0600 (Bangladesh Standard Time)
+        --this is our local time
+        
+        console.log(currentTime.getHours());   //2
+        console.log(currentTime.getMinutes()); // 49
+        console.log(currentTime.getSeconds()); // 1
+        */
+    </script>  
+</body>
+</html>

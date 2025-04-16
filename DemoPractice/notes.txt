@@ -1,0 +1,2 @@
+CSS Autocomplete Shortcut : Windows/Linux: Ctrl + Space
+//Mac: Cmd + Space (But this may trigger macOS Spotlight; if so, use Option + Esc or rebind it in settings)
